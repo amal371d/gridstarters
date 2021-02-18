@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Css Grid</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: "boks_a""boks_b""boks_c""boks_d";
+            grid-template-columns: repeat(1, fr);
+            grid-template-rows: repeat(1, fr);
+            grid-gap: 6px;
+            height: 100vh;
+        }
+
+        .item {}
+
+        .item-a {
+            grid-area: boks_a;
+            background-color: cadetblue;
+        }
+
+        .item-b {
+            grid-area: boks_b;
+            background-color: #b2c78f;
+        }
+
+        .item-c {
+            grid-area: boks_c;
+            background-color: #a4baba;
+        }
+
+        .item-d {
+            grid-area: boks_d;
+            background-color: cadetblue;
+
+        }
+
+        @media screen and (min-width:768px) {
+            .container {
+                grid-template-areas:
+                    "boks_a boks_a boks_a boks_a"
+                    "boks_b boks_c boks_c boks_c"
+                    "boks_b boks_c boks_c boks_c"
+                    "boks_d boks_d boks_d boks_d";
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="container">
+        <div class="item item-a">A</div>
+        <div class="item item-b">B</div>
+        <div class="item item-c">C</div>
+        <div class="item item-d">D</div>
+    </main>
+
+</body></html>
