@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
         figure {
             display: grid;
-            max-width: 40vw;
+            grid-template-columns: 1fr 1fr;
         }
 
         img,
         figcaption {
-            grid-area: 1/1;
+            border: 1px solid black;
         }
 
         figcaption {
-            place-self: top end;
+            place-self: center center;
             font-size: 1.6rem;
             color: blueviolet;
         }
